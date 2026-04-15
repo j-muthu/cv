@@ -59,17 +59,18 @@
   \vspace{-1pt}
 }
 
-\newcommand{\resumeSubheadingNoJob}[2]{
-  \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-    \textbf{#1} & \textit{\small#2} \\
-  \end{tabular*}
-  \vspace{-5pt}
-}
-
 \newcommand{\jobtitleanddate}[2]{
   \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
     \textit{\small#1} & \textit{\small#2} \\
   \end{tabular*}\vspace{-4pt}
+}
+
+\newcommand{\resumeSubheadingNoJob}[2]{
+  \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & \textit{\small#2} \\
+  \end{tabular*}
+  \vspace{-5pt} % needs to equal the sum of the above 2 vspaces 
+  % (jobtitleanddate and resumeSubheading)
 }
 
 \newcommand{\resumeItemListStart}{\begin{itemize}}
