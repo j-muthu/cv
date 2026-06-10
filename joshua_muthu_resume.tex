@@ -40,8 +40,8 @@
 
 % Sections formatting
 \titleformat{\section}{
-  \vspace{-2pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-2pt}]
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
 % Custom commands
 \newcommand{\resumeSection}[1]{
@@ -56,24 +56,23 @@
 
 \newcommand{\resumeSubheading}[1]{
   \textbf{#1}\\
-  % \vspace{-1pt}
+  \vspace{-1pt}
 }
-
 
 \newcommand{\jobtitleanddate}[2]{
   \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
     \textit{\small#1} & \textit{\small#2} \\
-  \end{tabular*} 
-  \vspace{-4pt}
-  }
-  
-  \newcommand{\resumeSubheadingNoJob}[2]{
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & \textit{\small#2} \\
-    \end{tabular*}
-    \vspace{-4pt}
-  }
-  
+  \end{tabular*}\vspace{-4pt}
+}
+
+\newcommand{\resumeSubheadingNoJob}[2]{
+  \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & \textit{\small#2} \\
+  \end{tabular*}
+  \vspace{-5pt} % needs to equal the sum of the above 2 vspaces 
+  % (jobtitleanddate and resumeSubheading)
+}
+
 \newcommand{\resumeItemListStart}{\begin{itemize}}
 \newcommand{\resumeItemListEnd}{\end{itemize}}
 
@@ -84,106 +83,157 @@
 \href{mailto:joshuasemuthu@gmail.com}{joshuasemuthu@gmail.com} | \href{https://www.linkedin.com/in/joshuamuthu/}{linkedin.com/in/joshuamuthu}
 
 \resumeSection{Education}
-    \resumeSubheading{Imperial College London}{}
+    \resumeSubheading{Imperial College London
+    % (ranked \href{https://www.topuniversities.com/world-university-rankings}{2\textsuperscript{nd} in the world})
+    }{}
     \jobtitleanddate{MSc, Computing}{2025 -- 2026}
         \resumeItemListStart
-            \resumeItem{Current average: \textbf{95.4\%}. Modules include: ML, Probabilistic Inference, Computer Vision, Software Systems Engineering}
+            \resumeItem{Current average: \textbf{95.4\%}. Modules include: Machine Learning, Computer Vision, Probabilistic Inference, Software Systems Engineering}
+            % \resumeItem{Languages: C++, Python (including PyTorch), SQL, Java, React, TypeScript}
             \resumeItem{Thesis: Applying Novel Causal AI Techniques to Portfolio Optimisation}
+            % \resumeItem{Notable projects: 
+            % Sudoku solver (C++), chess engine (C++), dart score calculator (C++), 
+            % Heimdall (see below), 
+            % improved Imperial's open-source teaching support platform (UI improvements and created microservice architecture to store user preferences persistently),
+            % trained U-Net architecture to segment brain scans,
+            % point-of-sale device and GUI (Java)
+            % }
         \resumeItemListEnd
         
-    \resumeSubheading{University of Warwick}{}
+    \resumeSubheading{University of Warwick
+    % (ranked \href{https://www.thetimes.com/uk-university-rankings/league-table}{1\textsuperscript{st} in UK for Economics})
+    }{}
     \jobtitleanddate{BSc, Economics (with Placement Year)}{2021 -- 2025}
       \resumeItemListStart
-        \resumeItem{Grade: 81.5\%, \textbf{ranked 5\textsuperscript{th} out of 435 students}; received Oliver Hart Prize in both eligible years for excellence}
-        \resumeItem{\href{https://drive.google.com/file/d/1aKVcHBeFojlJkycKHGQhQCexhrK_WOux/view?usp=sharing}{Research} on market-based solutions to coal pollution accepted to the 
-        \textbf{International Conference of Undergraduate Research}}
+        \resumeItem{Grade: First (81.5\%), \textbf{ranked 5\textsuperscript{th} out of 435 students}; received Oliver Hart Prize for excellence}
+        % \resumeItem{Modules included: Adv. Econometrics (Time Series, Microeconometrics), Data Science, Computing \& Data Analysis}
+        % \resumeItem{\href{https://drive.google.com/file/d/1hUSfG7tVbA5vPvoeau_mBixdaJYhl9xO/view?usp=sharing}{Dissertation}: The aggregate effects of urban growth in England with endogenous productivity}
+        % \resumeItem{\href{https://drive.google.com/file/d/1aKVcHBeFojlJkycKHGQhQCexhrK_WOux/view?usp=sharing}{Independent research} on market-based solutions to coal pollution accepted to the \textbf{2025 British Conference of Undergraduate Research} and the \textbf{2025 International Conference of Undergraduate Research}}
+        % \resumeItem{Year 2: First (87.1\%), ranked 4\textsuperscript{th} out of 713 Economics students. Modules included: Mathematical Economics (Game Theory), Development Economics, Econometrics}
+        % \resumeItem{Year 1: First (80.2\%), ranked 14\textsuperscript{th} out of 726 Economics students. Modules included: Mathematical Analysis, Mathematical \& Statistical Techniques}
+        % \resumeItem{In-Depth Effective Altruism Fellowship at Effective Altruism Warwick; Researcher at Warwick Think Tank}
       \resumeItemListEnd
+
+    % \resumeSubheading{City of London Freemen's School -- Academic Scholar}{}
+    % \jobtitleanddate{}{2012 -- 2021}
+    %     \resumeItemListStart
+    %         \resumeItem{A Levels (2021): A*A*A*A* in Mathematics, Further Mathematics, French, Economics}
+    %         \resumeItem{GCSEs (2019): All (10) Grade 9s (top 0.14\% of candidates in England); Additional Maths A}
+    %     \resumeItemListEnd
 
 \resumeSection{Experience}
 
     \resumeSubheading{Supervised Program for AI Alignment Research}
     \jobtitleanddate{Researcher}{September 2025 -- November 2025}
     \resumeItemListStart
-        \resumeItem{Wrote literature reviews on shocks in network macroeconomic models and on AI's effects on productivity}
-        \resumeItem{Produced \href{https://drive.google.com/file/d/1uoFprIvA7l3HcdSNJSE-ZR7_vi_luCEu/view?usp=sharing}{report}
-        on modelling production networks to quantify AI-driven shock propagation through the economy}
+        % \resumeItem{Wrote literature reviews on shocks in network macroeconomic models and on AI's effects on productivity}
+        \resumeItem{Produced \href{https://drive.google.com/file/d/1uoFprIvA7l3HcdSNJSE-ZR7_vi_luCEu/view?usp=sharing}{report} on modelling production networks to quantify how AI-driven shocks propagate through the economy}
     \resumeItemListEnd
-
+    
     \resumeSubheading{Entrepreneurs First}
     \jobtitleanddate{Investor}{June 2025 -- September 2025}
     \resumeItemListStart
-        \resumeItem{Identified talented technologists to join startup accelerator, and advised founders on ideation and GTM strategies}
+        \resumeItem{Sourced and assessed talented technologists for startup accelerator; advised founders on ideation and go-to-market strategies}
         \resumeItem{Networked across the UK tech ecosystem by attending tech events, 
         engaging with founders and researchers at startups,
         and mapping technical talent across UK universities in defence, space tech, and AI safety}
         \resumeItem{Single-handedly organised and secured full sponsorship for an
         \href{https://www.linkedin.com/posts/yuvraj-k_pushing-the-frontier-of-ai-security-activity-7370781173230350337-Bbpl/}{AI security hackathon},
         ran an AI safety-focused research demo night, and organised weekend meetups for talented builders}
+        % \resumeItem{Recruited for fall cohort: conducted interviews, debriefs, and in-person selection days}
+        % \resumeItem{In under a month, sourced 1 organic lead; the rest of the team (6 others) who had been working for over 6 months sourced around 20 (averaged 0.56 per month)}
+        % \resumeItem{Cultivated sense of talent; understood VC funding landscape; worked in close proximity to early-stage startups}
     \resumeItemListEnd
-    
-        \resumeSubheading{Protopia Group}
-        \jobtitleanddate{Founding Research Lead}{April 2024 -- November 2024}
-          \resumeItemListStart
-            \resumeItem{Founding member of a think tank focused on global progress and innovation;
-            informed government relations strategy}
-            \resumeItem{Authored \href{https://joshuamuthu.substack.com/p/to-boldly-grow}{report} analysing the space economy's spillover effects and recommending continued public investment}
-          \resumeItemListEnd
+
+    \resumeSubheading{Protopia Group}
+    \jobtitleanddate{Research Lead}{April 2024 -- November 2024}
+      \resumeItemListStart
+        \resumeItem{Authored \href{https://joshuamuthu.substack.com/p/to-boldly-grow}{report} analysing the space economy's spillover effects and recommending continued public investment}
+        \resumeItem{Founding member of a think tank focused on global progress; informed think tank-government relations strategy}
+        % \resumeItem{Founding member of a think tank focused on global progress and innovation}
+        % \resumeItem{Leveraged UK Government experience to provide strategic guidance on think tank-government relations}
+      \resumeItemListEnd
 
     \resumeSubheading{HM Revenue \& Customs, UK Government}
     \jobtitleanddate{Economist Placement Student, Pensions}{October 2023 -- August 2024}
       \resumeItemListStart
-        \resumeItem{Updated multibillion-pound fiscal models for Spring Budget;
-        produced National Statistics on
-        \href{https://webarchive.nationalarchives.gov.uk/ukgwa/20240924181540/https://www.gov.uk/government/statistics/personal-and-stakeholder-pensions-statistics}{pension tax charges}}
+        \resumeItem{Updated multibillion-pound private pension fiscal models for 2024 Spring Budget}
         \resumeItem{Created, from scratch, an economic model to quantify behavioural responses to tax reform}
-        \resumeItem{Briefed senior civil servants on pension analysis; delivered econometrics lectures to 100s of civil servants}
+        % \resumeItem{Produced National Statistics on \href{https://webarchive.nationalarchives.gov.uk/ukgwa/20240924181540/https://www.gov.uk/government/statistics/personal-and-stakeholder-pensions-statistics}{pension allowance charges}, including data visualisations in R and analytical reports}
+        \resumeItem{Briefed senior civil servants on pension analysis, including \href{https://www.gov.uk/government/publications/understanding-the-attitudes-and-behaviours-of-employers-towards-salary-sacrifice-for-pensions}{attitudes to salary sacrifice pension reform proposals}}
       \resumeItemListEnd
 
-    \resumeSubheading{WAW Statistical Consulting}
-    \jobtitleanddate{Research Assistant (Contract)}{September 2023 -- July 2024}
+    % \resumeSubheading{WAW Statistical Consulting}
+    % \jobtitleanddate{Research Assistant (Contract)}{September 2023 -- July 2024}
+    %   \resumeItemListStart
+    %     \resumeItem{Conducted statistical analysis and literature reviews for Bayesian meta-analysis papers on global development interventions}
+    %     \resumeItem{Wrote policy briefs on public health interventions, commissioned by Coefficient Giving}
+    %   \resumeItemListEnd
+    
+    \resumeSubheading{Frontier Economics}
+    \jobtitleanddate{Economic Consultant Intern, Competition Practice}{July -- September 2023}
       \resumeItemListStart
-        \resumeItem{Conducted statistical analysis and literature reviews for Bayesian meta-analyses on global development interventions}
-        \resumeItem{Wrote policy briefs on public health interventions, commissioned by Coefficient Giving}
+        \resumeItem{Undertook regression analysis and econometric modelling in Stata for multibillion-euro cartel overcharge case}
+        % \resumeItem{Collaborated directly with a Director to compile details of UK class action cases to inform future proposals}
       \resumeItemListEnd
 
-\resumeSection{Events \& Communities}
-
-    \resumeSubheading{BlueDot Impact}
-    \jobtitleanddate{Contractor}{November 2025}
+\resumeSection{Projects}
+    \resumeSubheadingNoJob{\href{https://urban-growth-england.vercel.app/}{What if England's Planning Regulation were Relaxed?}}{}
     \resumeItemListStart
-        \resumeItem{Organised, advertised and ran an \href{https://www.linkedin.com/posts/josh-landes12_last-week-may-just-have-been-the-busiest-activity-7399432058445459456-Tnsc/}{AI security (def/acc) hackathon}}
+        \resumeItem{Applied novel urban growth model to England, 
+        running counterfactual simulations showing that relaxing planning restrictions could raise national income per capita by 8--10\%}
+        % \resumeItem{Constructed city-level dataset from census, planning permission, and land use data; 
+        % adapted five structural parameters to the UK using empirical literature on agglomeration, congestion, and commuting}
+        \resumeItem{Publishing findings with the \textbf{Centre for British Progress} and presenting to policymakers}
     \resumeItemListEnd
 
-    \resumeSubheading{Socratica Warwick}
-    \jobtitleanddate{Founder, Host}{January -- June 2025}
+    \resumeSubheadingNoJob{\href{https://kalm-support-app.vercel.app/}{Kalm}}{}
     \resumeItemListStart
-        \resumeItem{Established and hosted the \href{https://socratica.info/}{Socratica} node at Warwick: weekly co-working sessions bringing together creatives and technologists to work on passion projects}
+        \resumeItem{\textbf{Shortlisted at ICHack 2026} (flagship Imperial hackathon); built AI voice agents for addiction recovery, with live chat and a Telegram bot (Python, FastAPI, Next.js)}
+        % \resumeItem{Tools used: \textbf{Python} (including \textbf{FastAPI}), \textbf{Next.js}}
+    \resumeItemListEnd
+
+    % \resumeSubheadingNoJob{\href{https://heimdall.impaas.uk/}{Heimdall}}{}
+    % \resumeItemListStart
+    %     \resumeItem{Created a safe route planner for South Kensington, using police and OpenStreetMaps data to avoid unsafe streets}
+    %     \resumeItem{Tools used: \textbf{Python} (including \textbf{Flask} and \textbf{SQLAlchemy}), \textbf{PostgreSQL, HTML, CSS}}
+    % \resumeItemListEnd
+    
+    % \resumeSubheadingNoJob{\href{https://drive.google.com/file/d/1Plp9Tvn9enxaS1kghOjivREAQnKrkhtI/view?usp=sharing}{Predicting Airbnb prices in Greater Manchester} (\href{https://github.com/j-muthu/data_sci_ec349/blob/cb8e17302650221b475a8642168355136268ac86/Assignment/EC349_Assignment.r}{source code})}{}
+    % \resumeItemListStart
+    %     \resumeItem{Used ML techniques (including random forest, boosting, and NNs) to predict prices using Airbnb listings data}
+    %     \resumeItem{Tools used: \textbf{TensorFlow, XGBoost, R}}
+    % \resumeItemListEnd
+
+\resumeSection{Activities}
+    \resumeSubheading{BlueDot Impact}
+    \jobtitleanddate{Contractor}{November 2025}
+      \resumeItemListStart
+          \resumeItem{Organised, advertised and ran an \href{https://www.linkedin.com/posts/josh-landes12_last-week-may-just-have-been-the-busiest-activity-7399432058445459456-Tnsc?utm_source=share&utm_medium=member_desktop&rcm=ACoAACx8f6sBbkg0YeKp5YIH3tpR5ZO5xRM5Oxw}{AI security-focused hackathon}}
+      \resumeItemListEnd
+      % \jobtitleanddate{Course Participant}{February 2024 -- February 2025}
+      % \resumeItemListStart
+      %     \resumeItem{Undertook courses on AI economics, governance, and safety (including interpretability and RLHF)}
+      % \resumeItemListEnd
+
+    \resumeSubheading{\href{https://socratica.info/}{Socratica Warwick}}
+    \jobtitleanddate{Co-founder, Host}{January -- August 2025}
+      \resumeItemListStart
+        \resumeItem{Hosted a dedicated space for creatives and innovators to pursue passion projects in weekly sessions}
+        \resumeItem{Organised \href{https://ensemble.rodeo/}{Ensemble} -- UK-wide showcase for passion projects}
     \resumeItemListEnd
 
     \resumeSubheading{European Summer Program on Rationality (FABRIC)}
     \jobtitleanddate{Alumnus, Participant}{August 2021 -- August 2023}
         \resumeItemListStart
-            \resumeItem{Co-developed and oversaw a grants program; organised a large-scale alumni reunion}
-            \resumeItem{Delivered classes on causal inference and AI and economic growth}
-    \resumeItemListEnd
-
-\resumeSection{Projects}
-    \resumeSubheadingNoJob{\href{https://urban-growth-england.vercel.app/}{What if England's Planning Regulation were Relaxed?}}{}
-    \resumeItemListStart
-        \resumeItem{Applied urban growth model to simulate economic effects of planning reform;
-        constructed city-level dataset from census, planning permission, and land use data}
-        \resumeItem{Collaborating with the \textbf{Centre for British Progress} to present findings to policymakers}
-    \resumeItemListEnd
-
-    \resumeSubheadingNoJob{\href{https://kalm-support-app.vercel.app/}{Kalm}}{}
-    \resumeItemListStart
-        \resumeItem{\textbf{Shortlisted at ICHack 2026}; built voice agents for addiction recovery with live chat and a Telegram bot}
+            % \resumeItem{Attended olympiad-level mathematics classes on probability, ML, algorithms, proofs, logic, and decision theory}
+            \resumeItem{Delivered classes on causal inference, econometrics, and AI and economic growth}
     \resumeItemListEnd
 
 \resumeSection{Research Grants}
-    \resumeSubheadingNoJob{Emergent Ventures Grant}{October 2024}
+    \resumeSubheadingNoJob{Emergent Ventures Grant -- \$10,000}{October 2024}
         \resumeItemListStart
-            \resumeItem{Awarded \$10,000 (after requesting only \$2,500) for research into urban economics in the UK and incorporating Bayesian inference into economic models}
+            \resumeItem{Awarded 4$\times$ my requested amount for research into urban economics in the UK and incorporating Bayesian inference into economic models}
         \resumeItemListEnd
 
 \end{document}
